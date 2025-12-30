@@ -26,7 +26,8 @@ Cloudflare作为全球领先的CDN服务商，免费提供不限流量的CC防�
 
 在运行本工具之前，请确保您的系统满足以下环境要求：
 
-Python版本方面，建议使用Python 3.6或更高版本。Python 3.6及以上版本原生支持f-string格式化字符串和字典序遍历等特性，能够保证脚本的正常运行。如果您的系统中Python版本较低，建议升级至最新稳定版本以获得最佳兼容性和性能表现。
+Python版本方面，建议使用Python 3.6或更高版本。Python
+3.6及以上版本原生支持f-string格式化字符串和字典序遍历等特性，能够保证脚本的正常运行。如果您的系统中Python版本较低，建议升级至最新稳定版本以获得最佳兼容性和性能表现。
 
 网络环境方面，需要确保能够正常访问目标数据源URL（`https://api.uouin.com/cloudflare.html`）。由于目标站点可能存在网络波动或临时不可用情况，建议在网络稳定的环境下运行脚本，或实现适当的重试机制以提高提取成功率。
 
@@ -38,7 +39,8 @@ Python版本方面，建议使用Python 3.6或更高版本。Python 3.6及以上
 
 第一步，创建项目目录并进入该目录。您可以在任意位置创建文件夹，用于存放本工具的相关文件。建议目录名称为`cloudflare-ip-extractor`，以明确项目用途。
 
-第二步，安装依赖包。使用pip命令安装BeautifulSoup4库，这是唯一的外部依赖。执行命令`pip install beautifulsoup4`即可完成安装，安装过程中pip会自动处理依赖关系。如果您的环境中同时存在Python 2和Python 3，建议使用`pip3 install beautifulsoup4`以确保安装到正确的Python版本。
+第二步，安装依赖包。使用pip命令安装BeautifulSoup4库，这是唯一的外部依赖。执行命令`pip install beautifulsoup4`即可完成安装，安装过程中pip会自动处理依赖关系。如果您的环境中同时存在Python
+2和Python 3，建议使用`pip3 install beautifulsoup4`以确保安装到正确的Python版本。
 
 第三步，下载或复制本工具的Python脚本文件。创建一个名为`cloudflare_ip_extractor.py`的文件，将代码内容完整复制进去。代码文件应与`requirements.txt`文件位于同一目录下，以便于管理和执行。
 
@@ -91,10 +93,10 @@ Python版本方面，建议使用Python 3.6或更高版本。Python 3.6及以上
 
 以下是文件的结构说明和示例：
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| isp | 字符串 | 运营商线路类型，支持电信、联通、移动、多线、IPV6 |
-| ip | 字符串 | IPv4或IPv6格式的节点IP地址 |
+| 字段 | 类型   | 说明                                             |
+| ---- | ------ | ------------------------------------------------ |
+| isp  | 字符串 | 运营商线路类型，支持电信、联通、移动、多线、IPV6 |
+| ip   | 字符串 | IPv4或IPv6格式的节点IP地址                       |
 
 对于IPv6地址，脚本会完整保留地址格式，包括所有冒号分隔的十六进制段。IPv4地址则采用标准的点分十进制表示法。
 
@@ -214,9 +216,9 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 
 本工具的正常运行依赖以下软件包：
 
-| 依赖包 | 版本要求 | 说明 |
-|--------|----------|------|
-| Python | >= 3.6 | 运行时环境 |
+| 依赖包         | 版本要求     | 说明       |
+| -------------- | ------------ | ---------- |
+| Python         | >= 3.6       | 运行时环境 |
 | beautifulsoup4 | 任意稳定版本 | HTML解析库 |
 
 安装命令：`pip install beautifulsoup4`
@@ -229,7 +231,8 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 
 如果您希望为本项目贡献代码或改进建议，欢迎通过以下方式进行：
 
-代码改进方面，如果您优化了解析算法、添加了新功能或修复了已知问题，欢迎提交Pull Request。请确保代码风格与现有项目保持一致，并添加适当的注释说明。
+代码改进方面，如果您优化了解析算法、添加了新功能或修复了已知问题，欢迎提交Pull
+Request。请确保代码风格与现有项目保持一致，并添加适当的注释说明。
 
 文档完善方面，如果发现文档描述不准确或存在遗漏，欢迎提出Issue或直接编辑文档内容。
 
@@ -237,7 +240,8 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 
 ## 许可证
 
-本项目采用MIT许可证开源，您可以自由使用、修改和分发本软件的源代码，但需要保留原始版权声明和许可证文本。关于MIT许可证的详细内容，请参阅项目中的LICENSE文件或访问Open Source Initiative官网查询。
+本项目采用MIT许可证开源，您可以自由使用、修改和分发本软件的源代码，但需要保留原始版权声明和许可证文本。关于MIT许可证的详细内容，请参阅项目中的LICENSE文件或访问Open
+Source Initiative官网查询。
 
 ## 联系方式
 
